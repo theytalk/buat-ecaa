@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buat pacar aku ♡</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+        :root {
+            --pink: #f7a9c4;
+            --deep: #d95f91;
+            --ink: #70495b;
+            --cream: #fff9fb;
+            --line: #f6d9e4;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        body:before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .25;
+            background-image: radial-gradient(#efb5ca 1px, transparent 1px);
+            background-size: 22px 22px;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            top: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 8px;
+            padding: 8px;
+            background: #ffffffd9;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            box-shadow: 0 8px 30px #c96d8b18;
+            backdrop-filter: blur(12px);
+        }
+
+        nav a {
+            font-size: 12px;
+            text-decoration: none;
+            color: var(--ink);
+            padding: 8px 12px;
+            border-radius: 999px;
+        }
+
+        nav a:hover {
+            background: #fff0f5;
+        }
+
+        section {
+            padding: 100px 22px;
+            max-width: 980px;
+            margin: auto;
+        }
+
+        .hero {
+            min-height: 100svh;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            padding-top: 120px;
+        }
+
+        .eyebrow {
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            font-size: 10px;
+            color: var(--deep);
+            font-weight: 700;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: clamp(48px, 9vw, 92px);
+            line-height: 1.02;
+            margin: 18px 0;
+            color: #b84f7b;
+        }
+
+        h1 em {
+            color: #e58bab;
+        }
+
+        .hero p {
+            max-width: 460px;
+            margin: 0 auto 25px;
+            line-height: 1.8;
+            color: #936b7c;
+        }
+
+        .hero-heart {
+            font-size: 38px;
+            display: inline-block;
+            animation: beat 1.3s infinite;
+        }
+
+        @keyframes beat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.18);
+            }
+        }
+
+        .btn {
+            border: 0;
+            background: var(--deep);
+            color: white;
+            padding: 13px 22px;
+            border-radius: 999px;
+            font: 600 13px 'DM Sans';
+            cursor: pointer;
+            box-shadow: 0 8px 20px #d95f9133;
+            transition: .2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: #c94d80;
+        }
+
+        .scroll {
+            display: block;
+            margin-top: 46px;
+            font-size: 11px;
+            color: #b68a9b;
+        }
+
+        h2 {
+            font-size: clamp(32px, 5vw, 48px);
+            text-align: center;
+            margin: 12px 0;
+            color: #a94c73;
+        }
+
+        .sub {
+            text-align: center;
+            color: #a47c8d;
+            line-height: 1.7;
+            margin: 0 auto 38px;
+            max-width: 520px;
+            font-size: 14px;
+        }
+
+        .paper {
+            max-width: 680px;
+            margin: auto;
+            background: #fff;
+            border: 1px solid #f5dce6;
+            border-radius: 24px;
+            padding: clamp(25px, 6vw, 54px);
+            box-shadow: 0 18px 55px #b95c8010;
+            position: relative;
+        }
+
+        .paper:before {
+            content: "♡";
+            position: absolute;
+            right: 25px;
+            top: 16px;
+            color: #f2b5cb;
+            font-size: 26px;
+        }
+
+        .paper p {
+            line-height: 2;
+            font-size: 15px;
+            color: #795969;
+        }
+
+        .salute {
+            font-family: 'Playfair Display';
+            font-size: 25px;
+            color: #c65c88;
+        }
+
+        .sign {
+            font-family: 'Playfair Display';
+            font-style: italic;
+            font-size: 22px;
+            color: #c65c88;
+            text-align: right;
+            margin-top: 24px;
+        }
+
+        .timeline {
+            max-width: 650px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 19px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: #f3c5d6;
+        }
+
+        .event {
+            position: relative;
+            padding: 0 0 28px 58px;
+        }
+
+        .dot {
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border: 5px solid #fff;
+            background: #e78eaf;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #f2c1d3;
+        }
+
+        .event-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 18px 20px;
+            box-shadow: 0 8px 25px #b95c8009;
+        }
+
+        .date {
+            font-size: 10px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #d16c94;
+            font-weight: 700;
+        }
+
+        .event h3 {
+            font-family: 'Playfair Display';
+            font-size: 21px;
+            margin: 7px 0;
+            color: #a94c73;
+        }
+
+        .event p {
+            font-size: 13px;
+            line-height: 1.7;
+            margin: 0;
+            color: #987789;
+        }
+
+        .secret-wrap {
+            text-align: center;
+        }
+
+        .envelope {
+            font-size: 68px;
+            display: block;
+            margin: 15px auto;
+            animation: float 2.8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-9px) rotate(3deg);
+            }
+        }
+
+        .secret {
+            max-width: 520px;
+            margin: 22px auto 0;
+            background: #fff;
+            border: 1px dashed #e9a9c1;
+            border-radius: 20px;
+            padding: 25px;
+            display: none;
+            line-height: 1.9;
+            animation: pop .35s ease;
+        }
+
+        .secret.show {
+            display: block;
+        }
+
+        @keyframes pop {
+            from {
+                opacity: 0;
+                transform: scale(.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 15px 55px;
+            color: #b28a9b;
+            font-size: 12px;
+        }
+
+        .float-heart {
+            position: fixed;
+            bottom: -30px;
+            pointer-events: none;
+            z-index: 20;
+            animation: rise linear forwards;
+            opacity: .8;
+        }
+
+        @keyframes rise {
+            to {
+                transform: translateY(-110vh) rotate(25deg);
+                opacity: 0;
+            }
+        }
+
+        @media(max-width:520px) {
+            nav {
+                width: calc(100% - 24px);
+                justify-content: center;
+                gap: 0;
+            }
+
+            nav a {
+                padding: 8px 10px;
+                font-size: 11px;
+            }
+
+            section {
+                padding: 82px 18px;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#surat">surat</a>
+        <a href="#cerita">cerita kita</a>
+        <a href="#rahasia">rahasia</a>
+    </nav>
+
+    <header class="hero">
+        <div>
+            <div class="hero-heart">♡</div>
+
+            <div class="eyebrow">
+                a tiny corner of the internet, just for you
+            </div>
+
+            <h1>hi, <em>sayang.</em></h1>
+
+            <p>
+                aku bikin tempat kecil ini khusus buat kamu.
+            </p>
+
+            <button class="btn" onclick="document.querySelector('#surat').scrollIntoView({behavior:'smooth'})">
+                buka sesuatu yang manis ↗
+            </button>
+
+            <span class="scroll">scroll pelan-pelan ya ↓</span>
+        </div>
+    </header>
+
+    <section id="surat">
+        <div class="eyebrow" style="text-align:center">
+            a letter for you
+        </div>
+
+        <h2>sedikit kata dari aku ♡</h2>
+
+        <p class="sub">
+            karena kadang, ada hal-hal yang lebih gampang ditulis
+            daripada diucapin langsung.
+        </p>
+
+        <article class="paper">
+            <div class="salute">hai, sayangku.</div>
+
+            <p>
+                aku cuma mau bilang makasih, ya.
+                makasih udah hadir dan bikin hari-hari aku
+                punya warna yang beda.
+            </p>
+
+            <p>
+                aku suka banget hal-hal kecil tentang kamu.
+                cara kamu cerita, cara kamu ketawa,
+                bahkan hal random yang mungkin menurut kamu biasa aja.
+                entah gimana, semuanya jadi hal yang aku tunggu-tunggu.
+            </p>
+
+            <p>
+                aku nggak janji bakal jadi orang yang sempurna.
+                tapi aku mau terus belajar buat ngerti kamu,
+                nemenin kamu, dan bikin kamu ngerasa disayang.
+            </p>
+
+            <p>
+                kalau suatu hari dunia lagi berisik,
+                semoga kamu inget kalau ada aku
+                yang selalu ada buat kamu.
+            </p>
+
+            <div class="sign">
+                dari orang keren ♡
+            </div>
+        </article>
+    </section>
+
+    <section id="cerita">
+        <div class="eyebrow" style="text-align:center">
+            little moments, big feelings
+        </div>
+
+        <h2>cerita kecil kita</h2>
+
+        <p class="sub">
+            beberapa momen yang pengen aku simpen baik-baik.
+        </p>
+
+        <div class="timeline">
+
+            <div class="event">
+                <span class="dot"></span>
+                <div class="event-card">
+                    <div class="date">momen pertama</div>
+                    <h3>awal kita kenal ✨</h3>
+                    <p>
+                        Awal kita kenal emang unexpected banget sih, aku waktu itu iseng banget main map roblox
+                        (neighboor) dan tiba tiba kenal kamu. Aku bakal inget terus masa masa itu sayang.
+                    </p>
+                </div>
+            </div>
+
+            <div class="event">
+                <span class="dot"></span>
+                <div class="event-card">
+                    <div class="date">momen spesial</div>
+                    <h3>hari yang bikin salting 🌷</h3>
+                    <p>
+                        Masih inget ga waktu kamu pertama kali manggil aku sayang?
+                        mungkin buat kamu itu cuma kata yang sederhana, tapi buat aku rasanya kaya sepsial banget. Entah
+                        kenapa, waktu itu kata sayang jadi punya arti yang jauh lebih , apalagi kalau yang manggil itu
+                        kamu.
+                    </p>
+                </div>
+            </div>
+
+            <div class="event">
+                <span class="dot"></span>
+                <div class="event-card">
+                    <div class="date">hari ini & seterusnya</div>
+                    <h3>masih banyak cerita di depan ♡</h3>
+                    <p>
+                        semoga kita terus punya alasan buat bikin
+                        kenangan baru, satu demi satu.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="rahasia">
+        <div class="eyebrow" style="text-align:center">
+            khusus kamu
+        </div>
+
+        <h2>ada pesan rahasia!</h2>
+
+        <p class="sub">
+            katanya ada sesuatu yang cuma bisa dibuka
+            sama cewek cantik. 🤭
+        </p>
+
+        <div class="secret-wrap">
+            <span class="envelope">💌</span>
+
+            <button class="btn" id="secretBtn" onclick="revealSecret()">
+                klik buat buka surat rahasia
+            </button>
+
+            <div class="secret" id="secret">
+                <div style="font-size:28px"></div>
+
+                <strong>sayang...</strong><br>
+
+                kalau kamu baca ini, berarti kamu udah sampai
+                di bagian paling rahasia.
+
+                satu hal yang perlu kamu tahu.
+                Kamu itu berharga, kamu pantas disayang dengan baik,
+                dan aku seneng banget bisa punya kesempatan
+                buat sayang sama kamu.
+
+                <br><br>
+
+                <strong>i choose you, today, tomorrow, and forever. ♡</strong>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        dibuat dengan banyak cinta, khusus buat kamu ♡
+        <br>
+        you + me = my favorite story
+    </footer>
+
+    <script>
+        function revealSecret() {
+            const box = document.getElementById('secret');
+
+            box.classList.toggle('show');
+
+            document.getElementById('secretBtn').textContent =
+                box.classList.contains('show')
+                    ? 'tutup dulu ♡'
+                    : 'klik buat buka surat rahasia';
+
+            if (box.classList.contains('show')) {
+                burstHearts(18);
+            }
+        }
+
+        function burstHearts(n = 1) {
+            for (let i = 0; i < n; i++) {
+                const h = document.createElement('span');
+
+                h.className = 'float-heart';
+
+                h.textContent = ['♡', '♥', '💕', '💗'][
+                    Math.floor(Math.random() * 4)
+                ];
+
+                h.style.left = Math.random() * 100 + 'vw';
+
+                h.style.fontSize =
+                    (14 + Math.random() * 22) + 'px';
+
+                h.style.animationDuration =
+                    (4 + Math.random() * 4) + 's';
+
+                document.body.appendChild(h);
+
+                setTimeout(() => h.remove(), 8500);
+            }
+        }
+
+        setInterval(() => burstHearts(1), 1100);
+    </script>
+
+</body>
+
+</html>
